@@ -137,7 +137,10 @@ public class BST implements Tree {
 		if (current == null) {
 			return false;
 		} else {
-			int compare = word.compareTo(current.value);
+			int compare = 0;
+			if(current.value != null){
+				compare = word.compareTo(current.value);
+			}
 			if (compare == 0) {
 				return true;
 			} else {
